@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @dbay.avatar.url(:medium) %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dbay.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @dbay.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dbay.description %>
+</p>
+
+<%= link_to 'Edit', edit_dbay_path(@dbay) %> |
+<%= link_to 'Back', dbays_path %>

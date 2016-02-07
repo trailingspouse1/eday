@@ -1,0 +1,34 @@
+<%= form_for(@dbay) do |f| %>
+  <% if @dbay.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dbay.errors.count, "error") %> prohibited this dbay from being saved:</h2>
+
+      <ul>
+      <% @dbay.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="field form-group">
+    <%= f.label "Photo" %><br>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
