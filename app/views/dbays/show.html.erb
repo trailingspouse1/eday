@@ -2,20 +2,21 @@
 
 <%= image_tag @dbay.avatar.url(:medium) %>
 
-<p>
-  <strong>Title:</strong>
+<div class="panel panel-default">
+	<div class="panel-heading">
   <%= @dbay.title %>
-</p>
+</div>
 
-<p>
+<div class="panel-body">
   <strong>Price:</strong>
   <%= @dbay.price %>
-</p>
+</div>
 
-<p>
+<div class="panel-body">
   <strong>Description:</strong>
-  <%= @dbay.description %>
-</p>
+  <%= @dbay.description %><br>
+  <strong>Posted on:</strong><%= @dbay.created_at.strftime('%m/%d/%Y %H:%M:%S') %>
+</div>
 
-<%= link_to 'Edit', edit_dbay_path(@dbay) %> |
-<%= link_to 'Back', dbays_path %>
+<%= link_to 'Edit', edit_dbay_path(@dbay), class: "btn btn-default"%> |
+<%= link_to 'Back', dbays_path, class: "btn btn-default"%>

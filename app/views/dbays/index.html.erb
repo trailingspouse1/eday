@@ -1,11 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Welcome to Diana's List</h1>
-<p>Buy, Sell, Connect</p>
-
-
-<p id="notice"><%= notice %></p>
-
 <div class="row">
  <% @dbays.each do |dbay| %>
   <div class="col-md-4">
@@ -13,7 +7,7 @@
       <div class="panel-body"> 
       <%= image_tag dbay.avatar.url(:medium), class: "img-responsive" %>
       <p><b>ID:</b> <%= dbay.id %> </p>
-       <p><b> What: <%= dbay.title %></b></p>
+       <p><b>What: <%= dbay.title %></b></p>
        <p><b>Price:</b> <%= dbay.price %> </p>
        <p><b>Description:</b> <%= dbay.description %></p>
 
